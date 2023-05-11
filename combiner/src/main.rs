@@ -1,8 +1,12 @@
+use std::env::{args, Args};
+
 fn main() {
     println!("This is going to be a combiner code written in Rust!");
   }
   
-  fn get_nth_arg(_n: usize) {
+  fn get_nth_arg(n: usize) -> String {
+    let mut args: Args = args();
+    return args.nth(n).unwrap();
   }
   
   #[cfg(test)]
